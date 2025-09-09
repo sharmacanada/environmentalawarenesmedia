@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f9f4;
+  color: #333;
+}
+
+a {
+  color: #2e7d32; /* green links */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #1b5e20; /* darker green on hover */
+}
+
+a:visited {
+  color: #ffffff; /* visited links appear white */
+}
+
+/* Header Styles */
+header {
+  background-color: #2e7d32; /* main green header */
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  float: left;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-links li a {
+  color: #fff;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+header .nav-links li a:hover {
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+.burger {
+  display: none; /* For mobile toggle, can add later */
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px;
+}
+
+/* Main Content Styles */
+main {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main h1 {
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Blog / Content Section with small images */
+.blog-post {
+  display: flex;
+  align-items: flex-start;
+  background-color: #e8f5e9;
+  padding: 20px;
+  margin: 20px 0;
+  border-left: 5px solid #2e7d32;
+  border-radius: 6px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog-post .text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.blog-post .image {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.blog-post .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.blog-post h2 {
+  color: #1b5e20;
+  margin-top: 0;
+}
+
+/* Call-to-Action */
+.call-to-action {
+  background-color: #c8e6c9;
+  padding: 30px;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.call-to-action h2 {
+  color: #2e7d32;
+}
+
+.call-to-action p {
+  color: #1b5e20;
+}
+
+/* Footer */
+footer {
+  background-color: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+  }
+  
+  .burger {
+    display: block;
+  }
+  
+  /* Stack text and small images on mobile */
+  .blog-post {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .blog-post .image {
+    width: 100%;
+    height: auto;
+  }
+}
